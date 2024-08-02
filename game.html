@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd Dice Game</title>
+    <!-- Link to the external JavaScript file -->
+    <script src="code.js"></script>
+    <!-- Basic styling for a better user experience -->
+    <style>
+       body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .guess-options {
+            margin-bottom: 20px;
+        }
+
+        .guess-options label {
+            font-size: 1.2em;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        .guess-options input[type="radio"] {
+            margin-right: 8px;
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            border: none;
+            border-radius: 30px;
+            background-color: #ff6b6b;
+            color: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff4c4c;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        #resultImage {
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+            display: none; /* Initially hide the image */
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading for the game -->
+    <h1>Even or Odd Dice Game</h1>
+    
+    <!-- Radio buttons for the user to select their guess -->
+    <div>
+        <label>
+            <input type="radio" name="guess" value="even"> Even
+        </label>
+        <label>
+            <input type="radio" name="guess" value="odd"> Odd
+        </label>
+    </div>
+    <br>
+    <!-- Button to roll the dice and play the game -->
+    <button onclick="playEvenOrOdd()">Roll the Dice</button>
+    
+    <!-- Div to display the result of the game -->
+    <div id="result"></div>
+    
+    <!-- Image element to display the win/lose image -->
+    <img id="resultImage" src="win.jpg">
+    <img id="resultImage" src="lose.jpg">
+</body>
+</html>
